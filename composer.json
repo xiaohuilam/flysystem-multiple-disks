@@ -1,0 +1,21 @@
+{
+    "name": "xiaohuilam/flysystem-multiple-disks",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "league/flysystem": "^1.0",
+        "illuminate/support": ">=5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xiaohuilam\\Flysystem\\MultipleDisks\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Xiaohuilam\\Flysystem\\MultipleDisks\\MultipleDisksServiceProvider"
+            ]
+        }
+    }
+}
