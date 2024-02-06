@@ -113,12 +113,7 @@ class Adapter implements FilesystemAdapter
 
     public function getUrl(string $path): string
     {
-        foreach ($this->disks as $disk) {
-            if (method_exists($disk, __FUNCTION__)) {
-                return $disk->{__FUNCTION__}($path);
-            }
-        }
-        return $path;
+        return (new Config($this->config))->get('url') . DIRECTORY_SEPARATOR . $path;
     }
 
     public function __call($name, $arguments)
